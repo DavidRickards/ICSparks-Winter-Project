@@ -32,15 +32,33 @@ Intermediate
    ```{ image: "https://www.vetcarepethospital.ca/wp-content/uploads/sites/247/2022/03/petrabbitcare-1-scaled.jpg", name: "Thumper", age: 1, species: "Rabbit", description: "An adorable and hopping rabbit." },```
 3) Now create and fill out 4 more pet objects.
 4) Now wrap all the object in an array like so:
+
 ```var petList = [ {object1}, {object2}, ...etc. ]```
 * Every object except the last one should be followed by a comma
 5) In our petList array the top object will be in the first index and the bottom object will be in the last index.
 
 ## Part 4: Javascript Displaying the Pet Objects
-1) Use document.getElementById to get references to HTML elements by their IDs and assign these references to variables. ```const petListSection = document.getElementById('petList');
-   const selectedPetInfoSection = document.getElementById('selectedPetInfo');
-   const rightButton = document.getElementById('rightButton');
-   const leftButton = document.getElementById('leftButton');```
+1) Use document.getElementById to get references to the HTML elements by their IDs we made in the HTML doc and assign these references to variables.
+* The variable "petListSection" will reference "petList".
+* The variable "selectedPetInfoSection" will reference the id "selectedPetInfo"
+* The variable "leftButton" will reference the id "leftButton"
+* The variable "rightButton" will reference the id "rightButton"
+
+For example : The variable "petListSection" will reference "petList".
+
+```const petListSection = document.getElementById('petList');```
+2) Now we will print the pet names to the site and we do this by first:
+* Clear the content of the petListSection. by adding ```.innerHTML = '';``` after it.
+* Now we will use a ```.forEach((pet, index) => { });``` loop to iterate through the "petList" variable array.
+* For each pet name we will create a ```const``` variable called "petName" and create a new <p> element to set it equal to like so:
+
+```document.createElement('p');```
+* Next, set the inner text of the <p> element of the petName (same command```.innerText```) equal to the objects name so ```pet.name```.
+* Append the variable "petName" to the "petListSection" variable.
+
+3) To keep track of the currently selected pet, initialize a ```let``` variable called "selectedIndex" and set it equal to the start or our array ```0```;
+* To ensure the pet objects information is shown we will call a "showPetInfo" function  with the properties ```petList[selectedIndex], selectedIndex``` to display information for the first pet. (we will fill this out at the end)
+
 
 ## Stretch Goals
 To improve this project you can:

@@ -14,7 +14,7 @@ function displayPets() {
   const rightButton = document.getElementById('rightButton');
   const leftButton = document.getElementById('leftButton');
 
-  // Display pet names in the left column
+  // Display pet names
   petListSection.innerHTML = '';
   petList.forEach((pet, index) => {
     const petName = document.createElement('p');
