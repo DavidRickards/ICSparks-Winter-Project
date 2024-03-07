@@ -47,8 +47,7 @@ For example : The variable "petListSection" will reference "petList".
 2) Now we will print the pet names to the site and we do this by first:
 * Clear the content of the petListSection. by adding ```.innerHTML = '';``` after it.
 * Now to display all the pet name in the array we will use a ```petList.forEach((pet, index) => {         });``` loop to iterate through the "petList" variable array. This loop goes at the pet list array and for each object in the array it does the following :
-  * For each pet name it will create a constant that a HTML 'p' element which is also something that you will learn in the next few weeks but I have provided for this assignment.
-  * 
+* For each pet name it will create a constant that a HTML 'p' element which is also something that you will learn in the next few weeks but I have provided for this assignment.
 * Next, set the inner text of the <p> element of the petName (same command```.innerText```) equal to the objects name so ```pet.name```.
 * Append the variable "petName" to the "petListSection" variable.
 
@@ -58,12 +57,12 @@ For example : The variable "petListSection" will reference "petList".
 4) Define the "showPetInfo" function with the properties ```pet & index```
 * In the function we take our "selectedPetInfoSection" constant and use another innerHTML command to insert our HTML code. 
   * Now on the right side of the equals first start by adding a ```<section></section>```
-  * Inside that we will add a <h2> element that says "Current Pet : "
+  * Inside that we will add a ```<h2>``` element that says "Current Pet : "
   * This is where we want to display the pets (objects) information that is stored in each objects properties and we do this  in the form ```${object.objects_property}``` so if we want the property "name" from the object "pet" then we type ```${pet.name}```
   * Next make an <img> element and have the src equal to the image property (```${pet.image}```)
-  * Make a <p> element and display the species property
-  * Make a <p> element and display the age property
-  * Make a <p> element and display the description property
+  * Make a ```<p>``` element and display the species property
+  * Make a ```<p>``` element and display the age property
+  * Make a ```<p>``` element and display the description property
 
 5) Setup the Button Event Listeners: Start by attaching event listeners to our navigation buttons, "leftButton" and "rightButton". This is how we will traverse though our pet array
 * Inside the leftButton.addEventListener function:
