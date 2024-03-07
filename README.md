@@ -44,6 +44,7 @@ Beginner
 For example : The variable "petListSection" will reference "petList".
 
 ```const petListSection = document.getElementById('petList');```
+
 2) Now we will print the pet names to the site and we do this by first:
 * Clear the content of the petListSection. by adding ```.innerHTML = '';``` after it.
 * Now to display all the pet name in the array we will use a ```petList.forEach((pet, index) => {         });``` loop to iterate through the "petList" variable array. This loop goes at the pet list array and for each object in the array it does the following :
